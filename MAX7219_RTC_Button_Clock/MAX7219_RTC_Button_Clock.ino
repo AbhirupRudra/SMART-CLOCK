@@ -13,7 +13,7 @@ unsigned long ct = 0;
 // pin 11 is connected to the DataIn on the display
 // pin 13 is connected to the CLK on the display
 // pin 10 is connected to CS on the display
-LedControl lc = LedControl(11, 13, 10, 4); //sets the 3 pins as 4, 5 & 6 and then sets 4 displays (max is 8 displays)
+LedControl lc = LedControl(11, 13, 10, 4); //sets the 3 pins as 11, 13 & 10 and then sets 4 displays (max is 8 displays)
 
 //global variables
 byte intensity = 5;                      // Default intensity/brightness (0-15)
