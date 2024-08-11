@@ -17,7 +17,7 @@ LedControl lc = LedControl(11, 13, 10, 4); //sets the 3 pins as 4, 5 & 6 and the
 
 //global variables
 byte intensity = 5;                      // Default intensity/brightness (0-15)
-byte clock_mode = 1;                     // Default clock mode. Default = 0 (basic_mode)
+byte clock_mode = 1;                     // Default clock mode. Default = 1 (small_mode)
 bool random_mode = 0;                    // Define random mode - changes the display type every few hours. Default = 0 (off)
 byte old_mode = clock_mode;              // Stores the previous clock mode, so if we go to date or whatever, we know what mode to go back to after.
 bool ampm = 1;                           // Define 12 or 24 hour time. 0 = 24 hour. 1 = 12 hour
