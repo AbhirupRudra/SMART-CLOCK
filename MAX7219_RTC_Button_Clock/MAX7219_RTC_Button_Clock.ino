@@ -45,9 +45,9 @@ char suffix[4][3] = {
 
 RTC_DS1307 ds1307;                              // Create RTC object
 
-Button buttonA = Button(2, BUTTON_PULLUP);      // Setup button A (using button library)
-Button buttonB = Button(3, BUTTON_PULLUP);      // Setup button B (using button library)
-Button buttonC = Button(4, BUTTON_PULLUP);      // Setup button C (using button library)
+Button buttonA = Button(2, BUTTON_PULLUP);      // Setup button A (using button library) mode
+Button buttonB = Button(3, BUTTON_PULLUP);      // Setup button B (using button library) +
+Button buttonC = Button(4, BUTTON_PULLUP);      // Setup button C (using button library) -
 
 void setup() {
 
@@ -692,11 +692,11 @@ void slide() {
       //digits_new[0] = (rtc[0]%10);           //0 - secs ones
       //digits_new[1] = ((rtc[0]/10)%10);      //1 - secs tens
       //rtc[1] = mins
-      digits_new[0] = (rtc[1] % 10);         //2 - mins ones
-      digits_new[1] = ((rtc[1] / 10) % 10);  //3 - mins tens
+      digits_new[0] = (rtc[1] % 10);         //0 - mins ones
+      digits_new[1] = ((rtc[1] / 10) % 10);  //1 - mins tens
       //rtc[2] = hours
-      digits_new[2] = (hours % 10);         //4 - hour ones
-      digits_new[3] = ((hours / 10) % 10);  //5 - hour tens
+      digits_new[2] = (hours % 10);         //2 - hour ones
+      digits_new[3] = ((hours / 10) % 10);  //3 - hour tens
       //rtc[4] = date
       //digits_new[6] = (rtc[4]%10);           //6 - date ones
       //digits_new[7] = ((rtc[4]/10)%10);      //7 - date tens
@@ -1170,7 +1170,7 @@ void display_date()
 
   //array of month names to print on the display. Some are shortened as we only have 8 characters across to play with
   char monthnames[12][9] = {
-    "January", "February", "March", "April", "May", "June", "July", "August", "Sept", "October", "November", "December"
+    "January", "February", "March", "April", "May", "June", "July", "August", "Septmber", "October", "November", "December"
   };
 
   //print the day name
